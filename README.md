@@ -6,3 +6,5 @@ testing, change management and Git workflows.
 
 Name: Santiago Colomer Andreu
 Professor: Richard Aviles Lopez
+
+See CONTRIBUTING.md for branch and commit conventions
