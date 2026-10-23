@@ -1,0 +1,60 @@
+== 1. Procesos de la instancia FREE (docker top = ps dentro del contenedor) ==
+506                 54321               85972               db_pmon_FREE
+510                 54321               83300               db_clmn_FREE
+514                 54321               84216               db_psp0_FREE
+518                 54321               96380               db_vktm_FREE
+524                 54321               86732               db_gen0_FREE
+528                 54321               125484              db_mman_FREE
+534                 54321               84392               db_gen2_FREE
+536                 54321               82724               db_diag_FREE
+540                 54321               89452               db_ofsd_FREE
+542                 54321               89296               db_gwpd_FREE
+544                 54321               118760              db_dbrm_FREE
+546                 54321               83324               db_vkrm_FREE
+548                 54321               103860              db_pman_FREE
+550                 54321               96272               db_dia0_FREE
+554                 54321               117768              db_dbw0_FREE
+ ... total de procesos de background (db_*_FREE en 26ai; ora_*_FREE en versiones anteriores): 61
+== 2. Procesos servidor (uno por sesión dedicada) y listener ==
+498                 54321               /opt/oracle/product/26ai/dbhomeFree/bin/tnslsnr LISTENER -inherit
+ (si no ves ningún oracleFREE es que no hay sesiones abiertas por red: abre SQLcl en otra terminal y repite)
+== 3. Memoria del contenedor (incluye la SGA) ==
+NAME          MEM USAGE / LIMIT     CPU %
+oralab-26ai   2.248GiB / 15.55GiB   2.23%
+== 4. La base de datos en disco: archivos del CDB y de FREEPDB1 ==
+FREEPDB1
+control01.ctl
+control02.ctl
+pdbseed
+redo01.log
+redo02.log
+redo03.log
+sysaux01.dbf
+system01.dbf
+temp01.dbf
+undotbs01.dbf
+users01.dbf
+-- FREEPDB1 --
+academia01.dbf
+clinica01.dbf
+fintech01.dbf
+logistica01.dbf
+retail01.dbf
+sysaux01.dbf
+system01.dbf
+temp01.dbf
+undotbs01.dbf
+users01.dbf
+== 5. Listener: servicios registrados ==
+Uptime                    0 days 0 hr. 6 min. 51 sec
+Default Service           FREE
+Listening Endpoints Summary...
+Services Summary...
+Service "55e54f210f100828e0630b00580adfd0" has 1 instance(s).
+  Instance "FREE", status READY, has 1 handler(s) for this service...
+Service "FREE" has 1 instance(s).
+  Instance "FREE", status READY, has 1 handler(s) for this service...
+Service "FREEXDB" has 1 instance(s).
+  Instance "FREE", status READY, has 1 handler(s) for this service...
+Service "freepdb1" has 1 instance(s).
+  Instance "FREE", status READY, has 1 handler(s) for this service...
