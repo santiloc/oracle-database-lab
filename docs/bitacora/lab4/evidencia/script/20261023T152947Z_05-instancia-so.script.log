@@ -1,0 +1,16 @@
+== 1. Procesos de la instancia FREE (docker top = ps dentro del contenedor) ==
+506                 54321               85968               db_pmon_FREE
+510                 54321               83300               db_clmn_FREE
+514                 54321               84212               db_psp0_FREE
+518                 54321               96380               db_vktm_FREE
+524                 54321               86572               db_gen0_FREE
+528                 54321               125484              db_mman_FREE
+534                 54321               84392               db_gen2_FREE
+536                 54321               82724               db_diag_FREE
+540                 54321               89452               db_ofsd_FREE
+542                 54321               89296               db_gwpd_FREE
+544                 54321               118740              db_dbrm_FREE
+546                 54321               83320               db_vkrm_FREE
+548                 54321               103860              db_pman_FREE
+550                 54321               96244               db_dia0_FREE
+554                 54321               105764              db_dbw0_FREE
