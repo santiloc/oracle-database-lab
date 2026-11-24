@@ -1,0 +1,10 @@
+== EVIDENCIA alumno=E018 hora=2026-11-24T16:32:37Z origen=601-estado
+== EVIDENCIA contenedor=5cee27d91cd1 dbid=1509902213 arranque=2026-11-24T15:28:41 scn=12448611
+
+Error starting at line : 1 File @ file:/home/santiago/oracle-database-lab/scripts/lab6/601-estado.sql
+In command -
+SELECT estudiante_id, estado FROM admin_academia.aca_estudiantes WHERE estudiante_id = 101
+Error at Command Line : 1 Column : 50 File @ file:/home/santiago/oracle-database-lab/scripts/lab6/601-estado.sql
+Error report -
+SQL Error: ORA-00942: table or view "ADMIN_ACADEMIA"."ACA_ESTUDIANTES" does not exist
+Help: https://docs.oracle.com/error-help/db/ora-00942/
