@@ -1,0 +1,34 @@
+== 1. Comprobaciones previas ==
+Volumen: 8622 MB · libre en backups/: 965026 MB
+== 2. Inventario de archivos (base abierta) ==
+
+TIPO		NOMBRE
+--------------- --------------------------------------------------------------------------------
+DATAFILE	/opt/oracle/oradata/FREE/system01.dbf
+DATAFILE	/opt/oracle/oradata/FREE/pdbseed/system01.dbf
+DATAFILE	/opt/oracle/oradata/FREE/sysaux01.dbf
+DATAFILE	/opt/oracle/oradata/FREE/pdbseed/sysaux01.dbf
+DATAFILE	/opt/oracle/oradata/FREE/users01.dbf
+DATAFILE	/opt/oracle/oradata/FREE/pdbseed/undotbs01.dbf
+DATAFILE	/opt/oracle/oradata/FREE/undotbs01.dbf
+DATAFILE	/opt/oracle/oradata/FREE/FREEPDB1/system01.dbf
+DATAFILE	/opt/oracle/oradata/FREE/FREEPDB1/sysaux01.dbf
+DATAFILE	/opt/oracle/oradata/FREE/FREEPDB1/undotbs01.dbf
+DATAFILE	/opt/oracle/oradata/FREE/FREEPDB1/users01.dbf
+DATAFILE	/opt/oracle/oradata/FREE/FREEPDB1/academia01.dbf
+DATAFILE	/opt/oracle/oradata/FREE/FREEPDB1/clinica01.dbf
+DATAFILE	/opt/oracle/oradata/FREE/FREEPDB1/retail01.dbf
+DATAFILE	/opt/oracle/oradata/FREE/FREEPDB1/logistica01.dbf
+DATAFILE	/opt/oracle/oradata/FREE/FREEPDB1/fintech01.dbf
+DATAFILE	/opt/oracle/oradata/FREE/FREEPDB1/tiendasur01.dbf
+CONTROLFILE	/opt/oracle/oradata/FREE/control01.ctl
+CONTROLFILE	/opt/oracle/oradata/FREE/control02.ctl
+CONTROLFILE	/opt/oracle/oradata/FREE/control03.ctl
+LOGFILE 	/opt/oracle/oradata/FREE/redo03.log
+LOGFILE 	/opt/oracle/oradata/FREE/redo02.log
+LOGFILE 	/opt/oracle/oradata/FREE/redo01.log
+LOGFILE 	/opt/oracle/oradata/FREE/redo01b.log
+LOGFILE 	/opt/oracle/oradata/FREE/redo02b.log
+LOGFILE 	/opt/oracle/oradata/FREE/redo03b.log
+PARAMETER	/opt/oracle/product/26ai/dbhomeFree/dbs/spfileFREE.ora
+== 3. Cobertura: ¿está todo dentro de /opt/oracle/oradata (el volumen)? ==
