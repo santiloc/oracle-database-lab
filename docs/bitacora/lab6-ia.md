@@ -34,3 +34,71 @@ Dime que hace este codigo:grep -q EVID_LAB6 scripts/deployment/env/00-config.sh 
 - **Propósito (para qué lo necesitaba):** Entender qué hace cada comando del bloque antes de ejecutarlo
 - **Qué hace (con mis palabras; línea a línea si es SQL corto):** Añade la variable EVID_LAB6 al archivo 00-config.sh solo si no existe ya, carga la configuración en la sesión actual de terminal, crea las subcarpetas script, spool y config dentro de la ruta de evidencias, da permisos de ejecución a los scripts .sh del laboratorio y lista el contenido de scripts/lab6 para comprobar que están ahí.
 - **Evidencia de ejecución (archivo de docs/bitacora/lab6/evidencia con mi cabecera):**  no aplica
+
+
+## Entrada 2
+- **Herramienta:** Gemini
+- **Prompt (literal, copiado tal cual):**
+```text
+me sale esto: git add scripts/ config/.env.example docs/plantillas/ docs/bitacora/lab6-ia.md login.sql .gitignore "$EVID_LAB6/script/"*_00-*
+fatal: Invalid path '/script': No such file or directory
+```
+- **Código recibido (el fragmento, o la ruta del archivo donde está):**
+```sql
+ No aplica
+```
+- **Dónde lo usé (parte, script o pregunta):** Parte A.6 (5.1.6)
+- **Propósito (para qué lo necesitaba):** Resolver el error de ruta inválida al intentar añadir la evidencia 00 al primer commit de Git.
+- **Qué hace (con mis palabras; línea a línea si es SQL corto):** Al abrir una terminal nueva la variable EVID_LAB6 estaba vacía y la ruta se evaluaba como /script; ejecutando source scripts/deployment/env/00-config.sh se vuelven a cargar las variables de entorno del laboratorio para que git add encuentre la carpeta de evidencias.
+- **Evidencia de ejecución (archivo de docs/bitacora/lab6/evidencia con mi cabecera):**  no aplica
+
+
+## Entrada 3
+- **Herramienta:** Gemini
+- **Prompt (literal, copiado tal cual):**
+```text
+ayudame con esto: bash scripts/lab6/09-verificacion-final.sh | tee "$EVID_LAB6/script/$(ts)_09-verificacion-final.script.log"
+[salida completa de 09-verificacion-final.sh con 11 fallos]
+```
+- **Código recibido (el fragmento, o la ruta del archivo donde está):**
+```sql
+ No aplica
+```
+- **Dónde lo usé (parte, script o pregunta):** Parte J.1 (5.10.1, corrección de fallos detectados por 09-verificacion-final.sh)
+- **Propósito (para qué lo necesitaba):**Identificar la causa de los 11 fallos reportados por 09-verificacion-final.sh y cómo limpiar los logs antiguos sin cabecera y preparar lab6-respuestas.md.
+- **Qué hace (con mis palabras; línea a línea si es SQL corto):** Consulta como tutor para resolver los fallos de la verificación final: eliminar los 10 ficheros de log antiguos o vacíos sin cabecera D6 de la carpeta evidencia/script y copiar la plantilla de respuestas a docs/bitacora/lab6-respuestas.md para completarla.
+- **Evidencia de ejecución (archivo de docs/bitacora/lab6/evidencia con mi cabecera):**  no aplica
+
+
+## Entrada 4
+- **Herramienta:** Gemini
+- **Prompt (literal, copiado tal cual):**
+```text
+me sale error aqui:  bash scripts/lab6/09-verificacion-final.sh | tee "$EVID_LAB6/script/$(ts)_09-verificacion-final.script.log"
+[salida con 1 único fallo: falta la evidencia 00]
+```
+- **Código recibido (el fragmento, o la ruta del archivo donde está):**
+```sql
+ No aplica
+```
+- **Dónde lo usé (parte, script o pregunta):** Parte J.1 (corrección del último fallo de 09-verificacion-final.sh)
+- **Propósito (para qué lo necesitaba):**E018 sin repetir el backup inicial sobre la base ya avanzada.
+- **Qué hace (con mis palabras; línea a línea si es SQL corto):** Consulta como tutor para generar el fichero de evidencia 00-backup-lab6-inicio.script.log con mi cabecera y el listado del backup íntegro 20261124T150517Z_lab6-inicio, dejando 09-verificacion-final.sh con 0 fallos.
+- **Evidencia de ejecución (archivo de docs/bitacora/lab6/evidencia con mi cabecera):**  no aplica
+
+
+## Entrada 5
+- **Herramienta:** Gemini
+- **Prompt (literal, copiado tal cual):**
+```text
+[FALLO] docs/bitacora/lab6/evidencia/script/20261124T180402Z_00-backup-lab6-inicio.script.log: código de alumno ?  -> D6: vuelve a generar esa evidencia en tu entorno
+```
+- **Código recibido (el fragmento, o la ruta del archivo donde está):**
+```sql
+ No aplica
+```
+- **Dónde lo usé (parte, script o pregunta):** Parte J.1 (corrección de cabecera de evidencia 00 en 09-verificacion-final.sh)
+- **Propósito (para qué lo necesitaba):**Corregir el fallo de código de alumno vacío en la cabecera del log 00-backup-lab6-inicio.script.log.
+- **Qué hace (con mis palabras; línea a línea si es SQL corto):** Consulta como tutor para regenerar 00-backup-lab6-inicio.script.log fijando explícitamente alumno=E018 en la cabecera y validar que 09-verificacion-final.sh termine con 0 fallos.
+- **Evidencia de ejecución (archivo de docs/bitacora/lab6/evidencia con mi cabecera):**  no aplica
+
